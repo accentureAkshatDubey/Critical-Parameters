@@ -1,6 +1,6 @@
-version: 0.0.15
+version: 0.0.16
 jobId: "985"
-jobName: SADP-CP-inspection_item_parameter_detail
+jobName: Inspection Item Parameter Detail
 jobType: Source Aligned Data Product
 alias: Iceberg_Write
 discoveryPort:
