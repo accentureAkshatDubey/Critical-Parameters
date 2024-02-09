@@ -1,4 +1,4 @@
-version: 0.0.9
+version: 0.0.10
 jobId: "998"
 jobName: critical parameter details
 jobType: Aggregated Data Product
@@ -14,17 +14,17 @@ inputPorts:
     optional:
       persistDataFrame: false
     type: dataproduct
-  - alias: International_Dealer_Master_1
+  - alias: Employee_Master_1
     isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:4c29493d-3443-4f96-96a3-69cea3226ad8
+    dataProductUrn: urn:dv:dataproduct:e0432435-1609-43cf-95eb-1396c4ce4c73
     filter: ""
     projection: ""
     optional:
       persistDataFrame: false
     type: dataproduct
-  - alias: Employee_Master_1
+  - alias: Parts_Accessories_Master_1
     isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:e0432435-1609-43cf-95eb-1396c4ce4c73
+    dataProductUrn: urn:dv:dataproduct:3ace113a-e949-4884-8b02-e1caddfcc28b
     filter: ""
     projection: ""
     optional:
@@ -267,10 +267,10 @@ transformation:
     references:
       - alias: Inspection_Item_Parameter_Detail_1
         sqlReference: inspection_item_parameter_details
-      - alias: International_Dealer_Master_1
-        sqlReference: ""
       - alias: Employee_Master_1
-        sqlReference: ""
+        sqlReference: employee_master
+      - alias: Parts_Accessories_Master_1
+        sqlReference: parts_accessories_master
 controlPort:
   dataQualityRules: {}
 outputPort:
