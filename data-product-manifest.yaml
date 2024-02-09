@@ -1,4 +1,4 @@
-version: 0.0.8
+version: 0.0.9
 jobId: "998"
 jobName: critical parameter details
 jobType: Aggregated Data Product
@@ -44,7 +44,215 @@ productState:
   alias: Write_to_Iceberg
   refreshInterval: None
   retentionVersions: ""
-  logicalSchema: ""
+  logicalSchema:
+    properties:
+      username:
+        type: STRING
+        description: ""
+      part_user_dept:
+        type: STRING
+        description: ""
+      insp_part_code:
+        type: STRING
+        description: ""
+      insp_sr_no:
+        type: STRING
+        description: ""
+      part_desc:
+        type: STRING
+        description: ""
+      part_vend_code:
+        type: STRING
+        description: ""
+      part_vend_desc:
+        type: STRING
+        description: ""
+      part_modl:
+        type: STRING
+        description: ""
+      insp_item:
+        type: STRING
+        description: ""
+      insp_from_date:
+        type: STRING
+        description: ""
+      insp_to_date:
+        type: STRING
+        description: ""
+      tran_prod_date:
+        type: STRING
+        description: ""
+      tran_line_code:
+        type: STRING
+        description: ""
+      tran_shift:
+        type: STRING
+        description: ""
+      tran_btch_code:
+        type: STRING
+        description: ""
+      tran_prod_stats:
+        type: STRING
+        description: ""
+      tran_prod_count:
+        type: STRING
+        description: ""
+      insp_base_value:
+        type: STRING
+        description: ""
+      insp_ltlr:
+        type: STRING
+        description: ""
+      insp_utlr:
+        type: STRING
+        description: ""
+      insp_unit:
+        type: STRING
+        description: ""
+      part_catg:
+        type: STRING
+        description: ""
+      insp_smpl_cnt:
+        type: STRING
+        description: ""
+      tran_sample1:
+        type: STRING
+        description: ""
+      tran_sample2:
+        type: STRING
+        description: ""
+      tran_sample3:
+        type: STRING
+        description: ""
+      tran_sample4:
+        type: STRING
+        description: ""
+      tran_sample5:
+        type: STRING
+        description: ""
+      tran_sample6:
+        type: STRING
+        description: ""
+      tran_sample7:
+        type: STRING
+        description: ""
+      tran_sample8:
+        type: STRING
+        description: ""
+      tran_sample9:
+        type: STRING
+        description: ""
+      tran_sample10:
+        type: STRING
+        description: ""
+      counta:
+        type: STRING
+        description: ""
+      min:
+        type: STRING
+        description: ""
+      max:
+        type: STRING
+        description: ""
+      range:
+        type: STRING
+        description: ""
+      mean:
+        type: STRING
+        description: ""
+      prev_value:
+        type: STRING
+        description: ""
+      moving_range:
+        type: STRING
+        description: ""
+      xbb:
+        type: STRING
+        description: ""
+      rbar:
+        type: STRING
+        description: ""
+      sigma:
+        type: STRING
+        description: ""
+      cp:
+        type: STRING
+        description: ""
+      cpl:
+        type: STRING
+        description: ""
+      cpu:
+        type: STRING
+        description: ""
+      cpk:
+        type: STRING
+        description: ""
+      xbar_ucl:
+        type: STRING
+        description: ""
+      xbar_lcl:
+        type: STRING
+        description: ""
+      rchart_ucl:
+        type: STRING
+        description: ""
+      rchart_lcl:
+        type: STRING
+        description: ""
+      xchart_ucl:
+        type: STRING
+        description: ""
+      xchart_lcl:
+        type: STRING
+        description: ""
+      mrchart_ucl:
+        type: STRING
+        description: ""
+      mrchart_lcl:
+        type: STRING
+        description: ""
+      flag_usl_lsl:
+        type: STRING
+        description: ""
+      flag_xbar_ucl_lcl:
+        type: STRING
+        description: ""
+      flag_rchart_ucl_lcl:
+        type: STRING
+        description: ""
+      flag_xchart_ucl_lcl:
+        type: STRING
+        description: ""
+      flag_mrchart_ucl_lcl:
+        type: STRING
+        description: ""
+      validation_usl_lsl:
+        type: STRING
+        description: ""
+      cp_flag:
+        type: STRING
+        description: ""
+      cpk_flag:
+        type: STRING
+        description: ""
+      continous_flag_alert:
+        type: STRING
+        description: ""
+      alert_details:
+        type: STRING
+        description: ""
+      _7_points_up:
+        type: STRING
+        description: ""
+      _7_points_down:
+        type: STRING
+        description: ""
+      runchart_ucl:
+        type: STRING
+        description: ""
+      runchart_lcl:
+        type: STRING
+        description: ""
   enforceSchemaMethod: ""
   isProfilingEnabled: false
 transformation:
