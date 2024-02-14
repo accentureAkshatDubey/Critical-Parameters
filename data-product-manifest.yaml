@@ -1,4 +1,4 @@
-version: 0.0.16
+version: 0.0.25
 jobId: "985"
 jobName: Inspection Item Parameter Detail
 jobType: Source Aligned Data Product
@@ -32,59 +32,89 @@ productState:
   retentionVersions: ""
   logicalSchema:
     properties:
-      TRAN_PART_CODE:
+      tran_part_code:
         type: STRING
         description: ""
-      TRAN_INSP_SR_NO:
+      tran_insp_sr_no:
         type: STRING
         description: ""
-      TRAN_PROD_STATS:
+      tran_prod_stats:
         type: STRING
         description: ""
-      TRAN_PROD_DATE:
+      tran_prod_date:
+        type: DATETIME
+        description: ""
+      tran_line_code:
         type: STRING
         description: ""
-      TRAN_LINE_CODE:
+      tran_shift:
         type: STRING
         description: ""
-      TRAN_SHIFT:
+      tran_btch_code:
         type: STRING
         description: ""
-      TRAN_BTCH_CODE:
+      tran_prod_count:
         type: STRING
         description: ""
-      TRAN_PROD_COUNT:
+      tran_sample1:
         type: STRING
         description: ""
-      INSP_PART_CODE:
+      tran_sample2:
         type: STRING
         description: ""
-      INSP_SR_NO:
+      tran_sample3:
         type: STRING
         description: ""
-      INSP_LTLR:
+      tran_sample4:
         type: STRING
         description: ""
-      INSP_UTLR:
+      tran_sample5:
         type: STRING
         description: ""
-      INSP_ITEM:
+      tran_sample6:
         type: STRING
         description: ""
-      INSP_SMPL_CNT:
+      tran_sample7:
         type: STRING
         description: ""
-      INSP_FROM_DATE:
+      tran_sample8:
         type: STRING
         description: ""
-      INSP_TO_DATE:
+      tran_sample9:
         type: STRING
         description: ""
-      INSP_BASE_VALUE:
-        type: NUMBER
+      tran_sample10:
+        type: STRING
         description: ""
-      INSP_UNIT:
-        type: NUMBER
+      insp_part_code:
+        type: STRING
+        description: ""
+      insp_sr_no:
+        type: STRING
+        description: ""
+      insp_ltlr:
+        type: STRING
+        description: ""
+      insp_utlr:
+        type: STRING
+        description: ""
+      insp_item:
+        type: STRING
+        description: ""
+      insp_smpl_cnt:
+        type: STRING
+        description: ""
+      insp_from_date:
+        type: DATETIME
+        description: ""
+      insp_to_date:
+        type: DATETIME
+        description: ""
+      insp_base_value:
+        type: STRING
+        description: ""
+      insp_unit:
+        type: STRING
         description: ""
   stateStoreType: loadDataIceberg
   isProfilingEnabled: false
@@ -105,12 +135,19 @@ transformation:
     description: Transform
     query: select  TRAN_PART_CODE ,  TRAN_INSP_SR_NO ,  TRAN_PROD_STATS
       ,  TRAN_PROD_DATE ,  TRAN_LINE_CODE ,  TRAN_SHIFT ,  TRAN_BTCH_CODE
-      ,  TRAN_PROD_COUNT ,  INSP_PART_CODE ,  INSP_SR_NO ,  INSP_LTLR
-      ,  INSP_UTLR ,  INSP_ITEM ,  INSP_SMPL_CNT ,  INSP_FROM_DATE
-      ,  INSP_TO_DATE ,  INSP_BASE_VALUE ,  INSP_UNIT from  QACP_TRAN inner join
+      ,  TRAN_PROD_COUNT ,  TRAN_SAMPLE1 ,  TRAN_SAMPLE2 ,  TRAN_SAMPLE3
+      ,  TRAN_SAMPLE4 ,  TRAN_SAMPLE5 ,  TRAN_SAMPLE6 ,  TRAN_SAMPLE7
+      ,  TRAN_SAMPLE8 ,  TRAN_SAMPLE9 ,  TRAN_SAMPLE10 ,  INSP_PART_CODE
+      ,  INSP_SR_NO ,  INSP_LTLR ,  INSP_UTLR ,  INSP_ITEM ,  INSP_SMPL_CNT
+      ,  INSP_FROM_DATE ,  INSP_TO_DATE ,  INSP_BASE_VALUE ,  INSP_UNIT
+      ,  INSP_CTRL_BAND ,  INSP_SMPL_FEQ ,  INSP_PART_RMRK ,  INSP_CTRL_LIMT
+      ,  INSP_CTRL_POINT ,  INSP_CLOSE_ALRT ,  INSP_SRC ,  INSP_CATG
+      ,  INSP_MISP_PLAN,  INSP_VEND_CODE,  INSP_MODL from  QACP_TRAN inner join
       QACP_INSP_ITEM on  QACP_TRAN.TRAN_PART_CODE =
-      QACP_INSP_ITEM.INSP_PART_CODE and QACP_TRAN.TRAN_INSP_SR_NO =
-      QACP_INSP_ITEM.INSP_SR_NO;
+      QACP_INSP_ITEM.INSP_PART_CODE  and QACP_TRAN.TRAN_INSP_SR_NO =
+      QACP_INSP_ITEM.INSP_SR_NO  and QACP_INSP_ITEM.INSP_VEND_CODE =
+      QACP_TRAN.TRAN_MAINT_PERS     and QACP_INSP_ITEM.INSP_MODL =
+      QACP_TRAN.TRAN_MODL;
     sequenceNo: 3
     references:
       - alias: qacp_tran_1
