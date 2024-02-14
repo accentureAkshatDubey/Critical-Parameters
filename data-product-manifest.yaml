@@ -1,4 +1,4 @@
-version: 0.0.10
+version: 0.0.14
 jobId: "998"
 jobName: critical parameter details
 jobType: Aggregated Data Product
@@ -6,14 +6,6 @@ alias: Write_to_Iceberg
 discoveryPort:
   name: critical parameter details
 inputPorts:
-  - alias: Inspection_Item_Parameter_Detail_1
-    isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
-    filter: ""
-    projection: ""
-    optional:
-      persistDataFrame: false
-    type: dataproduct
   - alias: Employee_Master_1
     isDynamic: true
     dataProductUrn: urn:dv:dataproduct:e0432435-1609-43cf-95eb-1396c4ce4c73
@@ -25,6 +17,14 @@ inputPorts:
   - alias: Parts_Accessories_Master_1
     isDynamic: true
     dataProductUrn: urn:dv:dataproduct:3ace113a-e949-4884-8b02-e1caddfcc28b
+    filter: ""
+    projection: ""
+    optional:
+      persistDataFrame: false
+    type: dataproduct
+  - alias: Inspection_Item_Parameter_Detail_1
+    isDynamic: true
+    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
     filter: ""
     projection: ""
     optional:
@@ -45,232 +45,25 @@ productState:
   refreshInterval: None
   retentionVersions: ""
   logicalSchema:
-    properties:
-      username:
-        type: STRING
-        description: ""
-      part_user_dept:
-        type: STRING
-        description: ""
-      insp_part_code:
-        type: STRING
-        description: ""
-      insp_sr_no:
-        type: STRING
-        description: ""
-      part_desc:
-        type: STRING
-        description: ""
-      part_vend_code:
-        type: STRING
-        description: ""
-      part_vend_desc:
-        type: STRING
-        description: ""
-      part_modl:
-        type: STRING
-        description: ""
-      insp_item:
-        type: STRING
-        description: ""
-      insp_from_date:
-        type: STRING
-        description: ""
-      insp_to_date:
-        type: STRING
-        description: ""
-      tran_prod_date:
-        type: STRING
-        description: ""
-      tran_line_code:
-        type: STRING
-        description: ""
-      tran_shift:
-        type: STRING
-        description: ""
-      tran_btch_code:
-        type: STRING
-        description: ""
-      tran_prod_stats:
-        type: STRING
-        description: ""
-      tran_prod_count:
-        type: STRING
-        description: ""
-      insp_base_value:
-        type: STRING
-        description: ""
-      insp_ltlr:
-        type: STRING
-        description: ""
-      insp_utlr:
-        type: STRING
-        description: ""
-      insp_unit:
-        type: STRING
-        description: ""
-      part_catg:
-        type: STRING
-        description: ""
-      insp_smpl_cnt:
-        type: STRING
-        description: ""
-      tran_sample1:
-        type: STRING
-        description: ""
-      tran_sample2:
-        type: STRING
-        description: ""
-      tran_sample3:
-        type: STRING
-        description: ""
-      tran_sample4:
-        type: STRING
-        description: ""
-      tran_sample5:
-        type: STRING
-        description: ""
-      tran_sample6:
-        type: STRING
-        description: ""
-      tran_sample7:
-        type: STRING
-        description: ""
-      tran_sample8:
-        type: STRING
-        description: ""
-      tran_sample9:
-        type: STRING
-        description: ""
-      tran_sample10:
-        type: STRING
-        description: ""
-      counta:
-        type: STRING
-        description: ""
-      min:
-        type: STRING
-        description: ""
-      max:
-        type: STRING
-        description: ""
-      range:
-        type: STRING
-        description: ""
-      mean:
-        type: STRING
-        description: ""
-      prev_value:
-        type: STRING
-        description: ""
-      moving_range:
-        type: STRING
-        description: ""
-      xbb:
-        type: STRING
-        description: ""
-      rbar:
-        type: STRING
-        description: ""
-      sigma:
-        type: STRING
-        description: ""
-      cp:
-        type: STRING
-        description: ""
-      cpl:
-        type: STRING
-        description: ""
-      cpu:
-        type: STRING
-        description: ""
-      cpk:
-        type: STRING
-        description: ""
-      xbar_ucl:
-        type: STRING
-        description: ""
-      xbar_lcl:
-        type: STRING
-        description: ""
-      rchart_ucl:
-        type: STRING
-        description: ""
-      rchart_lcl:
-        type: STRING
-        description: ""
-      xchart_ucl:
-        type: STRING
-        description: ""
-      xchart_lcl:
-        type: STRING
-        description: ""
-      mrchart_ucl:
-        type: STRING
-        description: ""
-      mrchart_lcl:
-        type: STRING
-        description: ""
-      flag_usl_lsl:
-        type: STRING
-        description: ""
-      flag_xbar_ucl_lcl:
-        type: STRING
-        description: ""
-      flag_rchart_ucl_lcl:
-        type: STRING
-        description: ""
-      flag_xchart_ucl_lcl:
-        type: STRING
-        description: ""
-      flag_mrchart_ucl_lcl:
-        type: STRING
-        description: ""
-      validation_usl_lsl:
-        type: STRING
-        description: ""
-      cp_flag:
-        type: STRING
-        description: ""
-      cpk_flag:
-        type: STRING
-        description: ""
-      continous_flag_alert:
-        type: STRING
-        description: ""
-      alert_details:
-        type: STRING
-        description: ""
-      _7_points_up:
-        type: STRING
-        description: ""
-      _7_points_down:
-        type: STRING
-        description: ""
-      runchart_ucl:
-        type: STRING
-        description: ""
-      runchart_lcl:
-        type: STRING
-        description: ""
+    properties: {}
   enforceSchemaMethod: ""
   isProfilingEnabled: false
 transformation:
   - alias: EMR_PySpark_1
     arguments: []
-    pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameters/critical_parameter_details.py
+    pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameter_details.py
     optional:
       sparkExtraConf:
         --jars: s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-core-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-spark-runtime-3.3_2.12-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-aws-bundle-1.4.3.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/delta-core_2.12-0.2.0.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/iceberg-spark3-runtime-0.13.2.jar
     type: customPySparkEMRServerless
     sequence: 4
     references:
-      - alias: Inspection_Item_Parameter_Detail_1
-        sqlReference: inspection_item_parameter_details
       - alias: Employee_Master_1
         sqlReference: employee_master
       - alias: Parts_Accessories_Master_1
         sqlReference: parts_accessories_master
+      - alias: Inspection_Item_Parameter_Detail_1
+        sqlReference: inspection_item_parameter_details
 controlPort:
   dataQualityRules: {}
 outputPort:
