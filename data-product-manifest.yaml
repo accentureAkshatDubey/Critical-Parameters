@@ -28,7 +28,8 @@ productState:
   alias: iceberg_state_management
   refreshInterval: None
   retentionVersions: ""
-  logicalSchema: ""
+  logicalSchema: 
+    properties: {}
   enforceSchemaMethod: ""
   isProfilingEnabled: false
 transformation:
