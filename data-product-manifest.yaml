@@ -1,0 +1,102 @@
+version: 0.0.10
+jobId: "1008"
+jobName: vendor critical parameter details
+jobType: Aggregated Data Product
+alias: iceberg_load
+discoveryPort:
+  name: vendor critical parameter details
+inputPorts:
+  - alias: critical_parameter_details_1
+    isDynamic: true
+    dataProductUrn: urn:dv:dataproduct:7dffc599-cb7a-4f9b-85f5-5e76c53fd572
+    filter: ""
+    projection: ""
+    optional:
+      persistDataFrame: false
+    type: dataproduct
+productState:
+  isDynamic: true
+  alias: iceberg_load
+  retentionVersions: ""
+  logicalSchema: ""
+  stateStoreType: loadDataIceberg
+  isProfilingEnabled: false
+  updateStrategy: Overwrite
+  tableName: msil_transformed_layer.vendor_critical_parameter_details
+  warehousePath: s3://msil-dataverse-quality-assurance/
+  catalogName: glue
+  optional:
+    persistDataFrame: false
+    enableDataReconciliation: false
+    enforceSchema: false
+    enforceSchemaMethod: Warning
+    catalogType: glue
+  refreshInterval: None
+transformation:
+  - alias: Spark_SQL_1
+    type: SQL
+    description: data transform
+    query: SELECT *  , CASE    WHEN COALESCE(insp_utlr, 0) != 0 and
+      COALESCE(insp_ltlr, 0) != 0    THEN COALESCE(insp_utlr, 0) -
+      (COALESCE(insp_utlr, 0)-COALESCE(insp_ltlr,
+      0))*control_band_percent   WHEN COALESCE(insp_utlr, 0) != 0 and
+      COALESCE(insp_ltlr, 0) = 0    THEN COALESCE(insp_utlr, 0) -
+      ABS(COALESCE(insp_utlr, 0)*control_band_percent)   WHEN
+      COALESCE(insp_utlr, 0) = 0 and COALESCE(insp_ltlr, 0) != 0    THEN
+      ''   ELSE 0    END as ucl  , CASE    WHEN COALESCE(insp_utlr, 0) != 0 and
+      COALESCE(insp_ltlr, 0) != 0    THEN COALESCE(insp_utlr, 0) +
+      (COALESCE(insp_utlr, 0)-COALESCE(insp_ltlr,
+      0))*control_band_percent   WHEN COALESCE(insp_utlr, 0) != 0 and
+      COALESCE(insp_ltlr, 0) = 0    THEN ''   WHEN COALESCE(insp_utlr, 0) = 0
+      and COALESCE(insp_ltlr, 0) != 0    THEN COALESCE(insp_ltlr, 0) +
+      ABS(COALESCE(insp_ltlr, 0)*control_band_percent)   ELSE 0    END as lcl
+      FROM (SELECT username  , part_user_dept  , insp_part_code  , insp_sr_no  ,
+      part_desc  , part_vend_code  , part_vend_desc  , part_modl  , insp_item  ,
+      insp_from_date  , insp_to_date  , tran_prod_date  , tran_line_code  ,
+      tran_shift  , tran_btch_code  , tran_prod_stats  , tran_prod_count  ,
+      insp_base_value  , insp_ltlr  , insp_utlr  , insp_unit  , part_catg  ,
+      insp_smpl_cnt  , tran_sample1  , tran_sample2  , tran_sample3  ,
+      tran_sample4  , tran_sample5  , tran_sample6  , tran_sample7  ,
+      tran_sample8  , tran_sample9  , tran_sample10  , counta  , min  , max  ,
+      range  , mean  , prev_value  , moving_range  , xbb  , rbar  , sigma  ,
+      cp  , cpl  , cpu  , cpk  , xbar_ucl  , xbar_lcl  , rchart_ucl  ,
+      rchart_lcl  , xchart_ucl  , xchart_lcl  , mrchart_ucl  , mrchart_lcl  ,
+      flag_usl_lsl  , flag_xbar_ucl_lcl  , flag_rchart_ucl_lcl  ,
+      flag_xchart_ucl_lcl  , flag_mrchart_ucl_lcl  , validation_usl_lsl  ,
+      cp_flag  , cpk_flag  , continous_flag_alert  , alert_details  ,
+      `_7_points_up`  , `_7_points_down`  , runchart_ucl  , runchart_lcl  ,
+      insp_smpl_feq  , insp_part_rmrk  , insp_ctrl_limt  , insp_ctrl_point  ,
+      insp_ctrl_band  , insp_close_alrt  , insp_src  , insp_catg  ,
+      insp_misp_plan  , CASE WHEN seq_num = 1 THEN 'SAMPLE 1'   WHEN seq_num = 2
+      THEN 'SAMPLE 2'   WHEN seq_num = 3 THEN 'SAMPLE 3'   WHEN seq_num = 4 THEN
+      'SAMPLE 4'   WHEN seq_num = 5 THEN 'SAMPLE 5'   WHEN seq_num = 6 THEN
+      'SAMPLE 6'   WHEN seq_num = 7 THEN 'SAMPLE 7'   WHEN seq_num = 8 THEN
+      'SAMPLE 8'   WHEN seq_num = 9 THEN 'SAMPLE 9'   WHEN seq_num = 10 THEN
+      'SAMPLE 10'    END as attribute  , CASE WHEN seq_num = 1 THEN
+      TRAN_SAMPLE1   WHEN seq_num = 2 THEN TRAN_SAMPLE2   WHEN seq_num = 3 THEN
+      TRAN_SAMPLE3   WHEN seq_num = 4 THEN TRAN_SAMPLE4   WHEN seq_num = 5 THEN
+      TRAN_SAMPLE5   WHEN seq_num = 6 THEN TRAN_SAMPLE6   WHEN seq_num = 7 THEN
+      TRAN_SAMPLE7   WHEN seq_num = 8 THEN TRAN_SAMPLE8   WHEN seq_num = 9 THEN
+      TRAN_SAMPLE9   WHEN seq_num = 10 THEN TRAN_SAMPLE10    END as value  ,
+      COALESCE(insp_ltlr, 0) as lower_value_uni  , COALESCE(insp_utlr, 0) as
+      upper_value_uni  , CASE    WHEN COALESCE(insp_ltlr, 0) != 0 and
+      COALESCE(insp_utlr, 0) != 0   THEN 1   ELSE 0    END as uni_values  ,
+      CASE     WHEN COALESCE(insp_ltlr, 0) != 0 AND COALESCE(insp_utlr, 0) !=
+      0   THEN (100-insp_ctrl_band)/200   WHEN COALESCE(insp_utlr, 0) != 0 AND
+      COALESCE(insp_ltlr, 0) = 0   THEN (100-insp_ctrl_band)/100   WHEN
+      COALESCE(insp_utlr, 0) = 0 AND COALESCE(insp_ltlr, 0) != 0   THEN
+      (100-insp_ctrl_band)/100    END as control_band_percent FROM (SELECT *  ,
+      EXPLODE(SEQUENCE(1,10)) SEQ_NUM   FROM   critical_parameter_details )
+      CRITICAL_PARAMETER_DETAILS_SEQ ) ;
+    sequenceNo: 2
+    references:
+      - alias: critical_parameter_details_1
+        sqlReference: critical_parameter_details
+controlPort:
+  dataQualityRules: {}
+outputPort:
+  subscriptionChannels:
+    - channelType: Postgres
+      queryType: SQL
+    - channelType: Dataproduct
+      queryType: SQL
