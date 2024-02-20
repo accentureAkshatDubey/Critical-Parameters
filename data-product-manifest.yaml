@@ -1,4 +1,4 @@
-version: 0.0.14
+version: 0.0.17
 jobId: "998"
 jobName: critical parameter details
 jobType: Aggregated Data Product
@@ -51,7 +51,7 @@ productState:
 transformation:
   - alias: EMR_PySpark_1
     arguments: []
-    pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameter_details.py
+    pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameters/critical_parameter_details.py
     optional:
       sparkExtraConf:
         --jars: s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-core-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-spark-runtime-3.3_2.12-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-aws-bundle-1.4.3.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/delta-core_2.12-0.2.0.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/iceberg-spark3-runtime-0.13.2.jar
