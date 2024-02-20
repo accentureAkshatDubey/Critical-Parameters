@@ -1,0 +1,53 @@
+version: 0.0.3
+jobId: "1003"
+jobName: consolidated critical parameter details
+jobType: Aggregated Data Product
+alias: iceberg_state_management
+discoveryPort:
+  name: consolidated critical parameter details
+inputPorts:
+  - alias: Inspection_Item_Parameter_Detail_1
+    isDynamic: true
+    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
+    filter: ""
+    projection: ""
+    optional:
+      persistDataFrame: false
+    type: dataproduct
+productState:
+  persistDataFrame: false
+  catalogType: glue
+  enforceSchema: false
+  stepName: iceberg_state_management
+  tableName: msil_transformed_layer.critical_parameter_details_consolidated
+  warehousePath: s3://msil-dataverse-quality-assurance/
+  catalogName: glue
+  type: readDataIceberg
+  isStateManagement: true
+  sequence: 3
+  alias: iceberg_state_management
+  refreshInterval: None
+  retentionVersions: ""
+  logicalSchema: ""
+  enforceSchemaMethod: ""
+  isProfilingEnabled: false
+transformation:
+  - alias: EMR_PySpark_1
+    arguments: []
+    pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameters/consolidated_critical_parameter_details.py
+    optional:
+      sparkExtraConf:
+        --jars: s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-core-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-spark-runtime-3.3_2.12-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-aws-bundle-1.4.3.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/delta-core_2.12-0.2.0.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/iceberg-spark3-runtime-0.13.2.jar
+    type: customPySparkEMRServerless
+    sequence: 2
+    references:
+      - alias: Inspection_Item_Parameter_Detail_1
+        sqlReference: ""
+controlPort:
+  dataQualityRules: {}
+outputPort:
+  subscriptionChannels:
+    - channelType: Postgres
+      queryType: SQL
+    - channelType: Dataproduct
+      queryType: SQL
