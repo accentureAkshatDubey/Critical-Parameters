@@ -18,7 +18,8 @@ productState:
   isDynamic: true
   alias: iceberg_load
   retentionVersions: ""
-  logicalSchema: ""
+  logicalSchema:
+    properties: {}
   stateStoreType: loadDataIceberg
   isProfilingEnabled: false
   updateStrategy: Overwrite
