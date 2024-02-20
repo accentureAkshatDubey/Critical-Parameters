@@ -1,4 +1,4 @@
-version: 0.0.3
+version: 0.0.4
 jobId: "1003"
 jobName: consolidated critical parameter details
 jobType: Aggregated Data Product
@@ -42,7 +42,7 @@ transformation:
     sequence: 2
     references:
       - alias: Inspection_Item_Parameter_Detail_1
-        sqlReference: ""
+        sqlReference: inspection_item_parameter_details
 controlPort:
   dataQualityRules: {}
 outputPort:
