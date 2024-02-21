@@ -1,4 +1,4 @@
-version: 0.0.19
+version: 0.0.21
 jobId: "985"
 jobName: Inspection Item Parameter Detail
 jobType: Aggregated Data Product
@@ -251,7 +251,7 @@ productState:
   stateStoreType: loadDataIceberg
   isProfilingEnabled: false
   updateStrategy: Overwrite
-  tableName: msil_transformed_layer.inspection_item_parameter_details
+  tableName: msil_dataverse_quality_assurance_catalog.inspection_item_parameter_details
   warehousePath: s3://msil-dataverse-quality-assurance/
   catalogName: glue
   optional:
