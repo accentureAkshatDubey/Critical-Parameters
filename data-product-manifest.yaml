@@ -1,4 +1,4 @@
-version: 0.0.15
+version: 0.0.4
 jobId: "1059"
 jobName: Vendor Critical Parameter Details
 jobType: Aggregated Data Product
@@ -7,9 +7,9 @@ alias: iceberg_load
 discoveryPort:
   name: Vendor Critical Parameter Details
 inputPorts:
-  - alias: critical_parameter_details_1
+  - alias: Inspection_Item_Parameter_Detail_1
     isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:7dffc599-cb7a-4f9b-85f5-5e76c53fd572
+    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
     filter: ""
     projection: ""
     optional:
@@ -497,7 +497,7 @@ transformation:
     description: data transform
     sequence: 2
     inputDataFrameList:
-      - inputDataFrame: critical_parameter_details_1
+      - inputDataFrame: Inspection_Item_Parameter_Detail_1
         tempViewName: critical_parameter_details
     query: select  * ,  case   when coalesce(insp_utlr,   0) != 0   and
       coalesce(insp_ltlr,   0) != 0 then coalesce(insp_utlr,   0) -
