@@ -1,233 +1,141 @@
-version: 0.0.7
-jobId: "985"
-jobName: Inspection Item Parameter Detail
+version: 0.0.1
+jobId: "1058"
+jobName: Consolidated Critical Parameter Details
 jobType: Aggregated Data Product
 domain: quality_assurance
-alias: Iceberg_Write
+alias: iceberg_state_management
 discoveryPort:
-  name: Inspection Item Parameter Detail
+  name: Consolidated Critical Parameter Details
 inputPorts:
-  - alias: qacp_tran_1
+  - alias: critical_parameter_details_1
     isDynamic: true
-    tableLocation: s3://msil-data-lake-curated/sr2/ppc_de/qacp_tran
+    dataProductUrn: urn:dv:dataproduct:7dffc599-cb7a-4f9b-85f5-5e76c53fd572
+    filter: ""
+    projection: ""
     optional:
       persistDataFrame: false
-      enableDataReconciliation: false
-      enforceSchema: false
-      connection: Critical Parameter S3 Connectivity
-      dataSetUrn: urn:dv:dataset:86706ad0-8044-47a7-9c5e-44feedab5b54
-    type: readDeltaTable
-  - alias: qacp_insp_item_1
-    isDynamic: true
-    tableLocation: s3://msil-data-lake-curated/sr2/ppc_de/qacp_insp_item
-    optional:
-      persistDataFrame: false
-      enableDataReconciliation: false
-      enforceSchema: false
-      connection: Critical Parameter S3 Connectivity
-      dataSetUrn: urn:dv:dataset:a7c6f74c-2658-43d2-a661-985951c3c822
-    type: readDeltaTable
+    type: dataproduct
 productState:
-  isDynamic: true
-  alias: Iceberg_Write
+  persistDataFrame: false
+  catalogType: glue
+  enforceSchema: false
+  stepName: iceberg_state_management
+  tableName: msil_dataverse_quality_assurance_catalog.critical_parameter_details_consolidated
+  warehousePath: s3://msil-dataverse-quality-assurance/
+  catalogName: glue
+  type: readDataIceberg
+  isStateManagement: true
+  sequence: 3
+  alias: iceberg_state_management
+  refreshInterval: None
   retentionVersions: ""
   logicalSchema:
     properties:
-      tran_part_code:
+      dept:
         type: STRING
-        description: ""
-        sourceColumn: TRAN_PART_CODE
-        sourceTable: QACP_TRAN
-      tran_insp_sr_no:
+        description: Department
+        sourceColumn: dept
+        sourceTable: critical_parameter_details
+      user_name:
         type: STRING
-        description: ""
-        sourceColumn: "TRAN_INSP_SR_NO "
-        sourceTable: QACP_TRAN
-      tran_prod_stats:
+        description: User name
+        sourceColumn: user_name
+        sourceTable: critical_parameter_details
+      vendor_code:
         type: STRING
-        description: ""
-        sourceColumn: "TRAN_PROD_STATS "
-        sourceTable: QACP_TRAN
-      tran_prod_date:
-        type: DATETIME
-        description: ""
-        sourceColumn: "TRAN_PROD_DATE "
-        sourceTable: QACP_TRAN
-      tran_line_code:
+        description: Vendor code
+        sourceColumn: vendor_code
+        sourceTable: critical_parameter_details
+      vendor_name:
         type: STRING
-        description: ""
-        sourceColumn: "TRAN_LINE_CODE "
-        sourceTable: QACP_TRAN
-      tran_shift:
+        description: Vendor name
+        sourceColumn: vendor_name
+        sourceTable: critical_parameter_details
+      part_code:
         type: STRING
-        description: ""
-        sourceColumn: TRAN_SHIFT
-        sourceTable: QACP_TRAN
-      tran_btch_code:
+        description: Part code
+        sourceColumn: part_code
+        sourceTable: critical_parameter_details
+      part_name:
         type: STRING
-        description: ""
-        sourceColumn: "TRAN_BTCH_CODE "
-        sourceTable: QACP_TRAN
-      tran_prod_count:
-        type: STRING
-        description: ""
-        sourceColumn: TRAN_PROD_COUNT
-        sourceTable: QACP_TRAN
-      tran_sample1:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE1 "
-        sourceTable: QACP_TRAN
-      tran_sample2:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE2 "
-        sourceTable: QACP_TRAN
-      tran_sample3:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE3 "
-        sourceTable: QACP_TRAN
-      tran_sample4:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE4 "
-        sourceTable: QACP_TRAN
-      tran_sample5:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE5 "
-        sourceTable: QACP_TRAN
-      tran_sample6:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE6 "
-        sourceTable: QACP_TRAN
-      tran_sample7:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE7 "
-        sourceTable: QACP_TRAN
-      tran_sample8:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE8 "
-        sourceTable: QACP_TRAN
-      tran_sample9:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE9 "
-        sourceTable: QACP_TRAN
-      tran_sample10:
-        type: STRING
-        description: ""
-        sourceColumn: "TRAN_SAMPLE10 "
-        sourceTable: QACP_TRAN
-      insp_part_code:
-        type: STRING
-        description: ""
-        sourceColumn: "INSP_PART_CODE "
-        sourceTable: QACP_INSP_ITEM
+        description: Part name
+        sourceColumn: part_name
+        sourceTable: critical_parameter_details
       insp_sr_no:
         type: STRING
-        description: ""
-        sourceColumn: INSP_SR_NO
-        sourceTable: QACP_INSP_ITEM
-      insp_ltlr:
+        description: Serial number
+        sourceColumn: insp_sr_no
+        sourceTable: critical_parameter_details
+      part_modl:
         type: STRING
-        description: ""
-        sourceColumn: INSP_LTLR
-        sourceTable: QACP_INSP_ITEM
-      insp_utlr:
+        description: Part model
+        sourceColumn: part_modl
+        sourceTable: critical_parameter_details
+      tran_line_code:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_UTLR "
-        sourceTable: QACP_INSP_ITEM
-      insp_item:
+        description: Line code
+        sourceColumn: tran_line_code
+        sourceTable: critical_parameter_details
+      prod_date:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_ITEM "
-        sourceTable: QACP_INSP_ITEM
-      insp_smpl_cnt:
+        description: Product date
+        sourceColumn: prod_date
+        sourceTable: critical_parameter_details
+      batch_code:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_SMPL_CNT "
-        sourceTable: QACP_INSP_ITEM
-      insp_from_date:
-        type: DATETIME
-        description: ""
-        sourceColumn: "INSP_FROM_DATE "
-        sourceTable: QACP_INSP_ITEM
-      insp_to_date:
-        type: DATETIME
-        description: ""
-        sourceColumn: "INSP_TO_DATE "
-        sourceTable: QACP_INSP_ITEM
-      insp_base_value:
+        description: Batch code
+        sourceColumn: batch_code
+        sourceTable: critical_parameter_details
+      inspection_item:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_BASE_VALUE "
-        sourceTable: QACP_INSP_ITEM
-      insp_unit:
+        description: Inspection item
+        sourceColumn: inspection_item
+        sourceTable: critical_parameter_details
+      lsl:
         type: STRING
-        description: ""
-        sourceColumn: INSP_UNIT
-        sourceTable: QACP_INSP_ITEM
-      insp_ctrl_band:
+        description: LSL
+        sourceColumn: lsl
+        sourceTable: critical_parameter_details
+      lcl:
         type: STRING
-        description: ""
-        sourceColumn: INSP_CTRL_BAND
-        sourceTable: QACP_INSP_ITEM
-      insp_smpl_feq:
+        description: LCL
+        sourceColumn: lcl
+        sourceTable: critical_parameter_details
+      lcl_control_band:
         type: STRING
-        description: ""
-        sourceColumn: INSP_SMPL_FEQ
-        sourceTable: QACP_INSP_ITEM
-      insp_part_rmrk:
+        description: LCL control band
+        sourceColumn: lcl_control_band
+        sourceTable: critical_parameter_details
+      ucl_control_band:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_PART_RMRK "
-        sourceTable: QACP_INSP_ITEM
-      insp_ctrl_limt:
+        description: UCL control band
+        sourceColumn: ucl_control_band
+        sourceTable: critical_parameter_details
+      ucl:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_CTRL_LIMT "
-        sourceTable: QACP_INSP_ITEM
-      insp_ctrl_point:
+        description: UCL
+        sourceColumn: ucl
+        sourceTable: critical_parameter_details
+      usl:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_CTRL_POINT "
-        sourceTable: QACP_INSP_ITEM
-      insp_close_alrt:
+        description: USL
+        sourceColumn: usl
+        sourceTable: critical_parameter_details
+      value:
         type: STRING
-        description: ""
-        sourceColumn: INSP_CLOSE_ALRT
-        sourceTable: QACP_INSP_ITEM
-      insp_src:
+        description: Value
+        sourceColumn: value
+        sourceTable: critical_parameter_details
+      alert_details:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_SRC "
-        sourceTable: QACP_INSP_ITEM
-      insp_catg:
+        description: Alert details
+        sourceColumn: alert_details
+        sourceTable: critical_parameter_details
+      category:
         type: STRING
-        description: ""
-        sourceColumn: "INSP_CATG "
-        sourceTable: QACP_INSP_ITEM
-      insp_misp_plan:
-        type: STRING
-        description: ""
-        sourceColumn: "INSP_MISP_PLAN "
-        sourceTable: QACP_INSP_ITEM
-      insp_vend_code:
-        type: STRING
-        description: ""
-        sourceColumn: "INSP_VEND_CODE "
-        sourceTable: QACP_INSP_ITEM
-      insp_modl:
-        type: STRING
-        description: ""
-        sourceColumn: "INSP_MODL "
-        sourceTable: QACP_INSP_ITEM
+        description: Category
+        sourceColumn: category
+        sourceTable: critical_parameter_details
       etl_inserted_date:
         type: DATETIME
         description: ETL Audit Field to identify record insertion date
@@ -248,49 +156,22 @@ productState:
         description: ETL Audit Field to identify record modified by user
         sourceColumn: Manual
         sourceTable: Manual
-  stateStoreType: loadDataIceberg
+  enforceSchemaMethod: ""
   isProfilingEnabled: false
-  updateStrategy: Overwrite
-  tableName: msil_dataverse_quality_assurance_catalog.inspection_item_parameter_details
-  warehousePath: s3://msil-dataverse-quality-assurance/
-  catalogName: glue
-  optional:
-    persistDataFrame: false
-    enableDataReconciliation: false
-    enforceSchema: true
-    enforceSchemaMethod: Warning
-    catalogType: glue
-  refreshInterval: None
 transformation:
   - isDynamic: true
-    alias: Spark_SQL_1
-    description: Transform
-    sequence: 3
+    alias: EMR_PySpark_1
+    description: apply_transformation
+    sequence: 2
+    arguments: []
+    pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameters/consolidated_critical_parameter_details.py
     inputDataFrameList:
-      - inputDataFrame: qacp_tran_1
-        tempViewName: QACP_TRAN
-      - inputDataFrame: qacp_insp_item_1
-        tempViewName: QACP_INSP_ITEM
-    query: select  TRAN_PART_CODE ,  TRAN_INSP_SR_NO ,  TRAN_PROD_STATS
-      ,  TRAN_PROD_DATE ,  TRAN_LINE_CODE ,  TRAN_SHIFT ,  TRAN_BTCH_CODE
-      ,  TRAN_PROD_COUNT ,  TRAN_SAMPLE1 ,  TRAN_SAMPLE2 ,  TRAN_SAMPLE3
-      ,  TRAN_SAMPLE4 ,  TRAN_SAMPLE5 ,  TRAN_SAMPLE6 ,  TRAN_SAMPLE7
-      ,  TRAN_SAMPLE8 ,  TRAN_SAMPLE9 ,  TRAN_SAMPLE10 ,  INSP_PART_CODE
-      ,  INSP_SR_NO ,  INSP_LTLR ,  INSP_UTLR ,  INSP_ITEM ,  INSP_SMPL_CNT
-      ,  INSP_FROM_DATE ,  INSP_TO_DATE ,  INSP_BASE_VALUE ,  INSP_UNIT
-      ,  INSP_CTRL_BAND ,  INSP_SMPL_FEQ ,  INSP_PART_RMRK ,  INSP_CTRL_LIMT
-      ,  INSP_CTRL_POINT ,  INSP_CLOSE_ALRT ,  INSP_SRC ,  INSP_CATG
-      ,  INSP_MISP_PLAN,  INSP_VEND_CODE,  INSP_MODL,  current_timestamp() as
-      etl_inserted_date,  current_timestamp() as
-      etl_modified_date,  'platform_admin' as etl_created_by,  'platform_admin'
-      as etl_updated_by from  QACP_TRAN inner join QACP_INSP_ITEM
-      on  QACP_TRAN.TRAN_PART_CODE = QACP_INSP_ITEM.INSP_PART_CODE  and
-      QACP_TRAN.TRAN_INSP_SR_NO = QACP_INSP_ITEM.INSP_SR_NO  and
-      QACP_INSP_ITEM.INSP_VEND_CODE = QACP_TRAN.TRAN_MAINT_PERS  and
-      QACP_INSP_ITEM.INSP_MODL = QACP_TRAN.TRAN_MODL;
+      - inputDataFrame: ""
+        tempViewName: ""
     optional:
-      persistDataFrame: false
-    type: operationThroughSqlQuery
+      sparkExtraConf:
+        --jars: s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-core-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-spark-runtime-3.3_2.12-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-aws-bundle-1.4.3.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/delta-core_2.12-0.2.0.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/iceberg-spark3-runtime-0.13.2.jar
+    type: customPySparkEMRServerless
 controlPort:
   dataQualityRules: {}
 outputPort:
