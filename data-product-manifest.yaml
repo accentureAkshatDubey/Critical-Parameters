@@ -1,11 +1,11 @@
-version: 0.0.25
+version: 0.0.27
 jobId: "998"
-jobName: Critical Parameter Details
+jobName: critical parameter details
 jobType: Aggregated Data Product
 domain: quality_assurance
 alias: Write_to_Iceberg
 discoveryPort:
-  name: Critical Parameter Details
+  name: critical parameter details
 inputPorts:
   - alias: Employee_Master_1
     isDynamic: true
