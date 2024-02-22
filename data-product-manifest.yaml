@@ -1,4 +1,4 @@
-version: 0.0.5
+version: 0.0.6
 jobId: "1059"
 jobName: Vendor Critical Parameter Details
 jobType: Aggregated Data Product
@@ -562,7 +562,20 @@ transformation:
       persistDataFrame: false
     type: operationThroughSqlQuery
 controlPort:
-  dataQualityRules: {}
+  dataQualityRules:
+    RecordCountCheck:
+      productState:
+        expression: ">"
+        number: 0
+        referenceAlias: iceberg_load
+    NullValueCheck:
+      productState:
+        checks:
+          - column: PART_VEND_CODE
+          - column: INSP_PART_CODE
+          - column: INSP_ITEM
+          - column: TRAN_PROD_DATE
+        referenceAlias: iceberg_load
 outputPort:
   subscriptionChannels:
     - channelType: Postgres
