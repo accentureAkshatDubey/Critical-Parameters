@@ -1,11 +1,11 @@
-version: 0.0.27
-jobId: "998"
-jobName: critical parameter details
+version: 0.0.2
+jobId: "1057"
+jobName: Critical Parameter Details
 jobType: Aggregated Data Product
 domain: quality_assurance
 alias: Write_to_Iceberg
 discoveryPort:
-  name: critical parameter details
+  name: Critical Parameter Details
 inputPorts:
   - alias: Employee_Master_1
     isDynamic: true
@@ -15,17 +15,17 @@ inputPorts:
     optional:
       persistDataFrame: false
     type: dataproduct
-  - alias: Parts_Accessories_Master_1
+  - alias: Inspection_Item_Parameter_Detail_1
     isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:3ace113a-e949-4884-8b02-e1caddfcc28b
+    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
     filter: ""
     projection: ""
     optional:
       persistDataFrame: false
     type: dataproduct
-  - alias: Inspection_Item_Parameter_Detail_1
+  - alias: Parts_Accessories_Master_1
     isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
+    dataProductUrn: urn:dv:dataproduct:3ace113a-e949-4884-8b02-e1caddfcc28b
     filter: ""
     projection: ""
     optional:
