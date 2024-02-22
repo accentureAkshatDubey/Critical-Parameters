@@ -1,4 +1,4 @@
-version: 0.0.2
+version: 0.0.3
 jobId: "1059"
 jobName: Vendor Critical Parameter Details
 jobType: Aggregated Data Product
@@ -23,412 +23,419 @@ productState:
     properties:
       username:
         type: STRING
-        description: ""
+        description: MSIL Concered Department UserName
         sourceColumn: username
         sourceTable: Critical parameter details
       part_user_dept:
         type: STRING
-        description: ""
+        description: Department ID of User
         sourceColumn: part_user_dept
         sourceTable: Critical parameter details
       insp_part_code:
         type: STRING
-        description: ""
+        description: Code of inspection item
         sourceColumn: insp_part_code
         sourceTable: Critical parameter details
       insp_sr_no:
         type: STRING
-        description: ""
+        description: Serial Number of Inspection Item
         sourceColumn: insp_sr_no
         sourceTable: Critical parameter details
       part_desc:
         type: STRING
-        description: ""
+        description: Part Description
         sourceColumn: part_desc
         sourceTable: Critical parameter details
       part_vend_code:
         type: STRING
-        description: ""
+        description: Vendor Code supplying the part
         sourceColumn: part_vend_code
         sourceTable: Critical parameter details
       part_vend_desc:
         type: STRING
-        description: ""
+        description: Vendor Description
         sourceColumn: part_vend_desc
         sourceTable: Critical parameter details
       part_modl:
         type: STRING
-        description: ""
+        description: part model
         sourceColumn: part_modl
         sourceTable: Critical parameter details
       insp_item:
         type: STRING
-        description: ""
+        description: Inspection Item
         sourceColumn: insp_item
         sourceTable: Critical parameter details
       insp_from_date:
         type: STRING
-        description: ""
+        description: From date field of inspection item
         sourceColumn: insp_from_date
         sourceTable: Critical parameter details
       insp_to_date:
         type: STRING
-        description: ""
+        description: To Date field of inspection item
         sourceColumn: insp_to_date
         sourceTable: Critical parameter details
       tran_prod_date:
         type: STRING
-        description: ""
+        description: Production Date of Component
         sourceColumn: tran_prod_date
         sourceTable: Critical parameter details
       tran_line_code:
         type: STRING
-        description: ""
+        description: Line Description
         sourceColumn: tran_line_code
         sourceTable: Critical parameter details
       tran_shift:
         type: STRING
-        description: ""
+        description: Shift Name
         sourceColumn: tran_shift
         sourceTable: Critical parameter details
       tran_btch_code:
         type: STRING
-        description: ""
+        description: Batch Code
         sourceColumn: tran_btch_code
         sourceTable: Critical parameter details
       tran_prod_stats:
         type: STRING
-        description: ""
+        description: Prod stats
         sourceColumn: tran_prod_stats
         sourceTable: Critical parameter details
       tran_prod_count:
         type: STRING
-        description: ""
+        description: "Unique Number added "
         sourceColumn: tran_prod_count
         sourceTable: Critical parameter details
       insp_base_value:
         type: STRING
-        description: ""
+        description: Mean(Provided in system)
         sourceColumn: insp_base_value
         sourceTable: Critical parameter details
       insp_ltlr:
         type: STRING
-        description: ""
+        description: LSL -Lower spec limit
         sourceColumn: insp_ltlr
         sourceTable: Critical parameter details
       insp_utlr:
         type: STRING
-        description: ""
+        description: USL - Upper spec limit
         sourceColumn: insp_utlr
         sourceTable: Critical parameter details
       insp_unit:
         type: STRING
-        description: ""
+        description: Dimension (cm,mm, etc)
         sourceColumn: insp_unit
         sourceTable: Critical parameter details
       part_catg:
         type: STRING
-        description: ""
+        description: A/R/AR
         sourceColumn: part_catg
         sourceTable: Critical parameter details
       insp_smpl_cnt:
         type: STRING
-        description: ""
+        description: Number of samples available for Cosideration
         sourceColumn: insp_smpl_cnt
         sourceTable: Critical parameter details
       tran_sample1:
         type: STRING
-        description: ""
+        description: 1st sample value entered by vendor
         sourceColumn: tran_sample1
         sourceTable: Critical parameter details
       tran_sample2:
         type: STRING
-        description: ""
+        description: 2nd sample value entered by vendor
         sourceColumn: tran_sample2
         sourceTable: Critical parameter details
       tran_sample3:
         type: STRING
-        description: ""
+        description: 3rd sample value entered by vendor
         sourceColumn: tran_sample3
         sourceTable: Critical parameter details
       tran_sample4:
         type: STRING
-        description: ""
+        description: 4th sample value entered by vendor
         sourceColumn: tran_sample4
         sourceTable: Critical parameter details
       tran_sample5:
         type: STRING
-        description: ""
+        description: 5th sample value entered by vendor
         sourceColumn: tran_sample5
         sourceTable: Critical parameter details
       tran_sample6:
         type: STRING
-        description: ""
+        description: 6th sample value entered by vendor
         sourceColumn: tran_sample6
         sourceTable: Critical parameter details
       tran_sample7:
         type: STRING
-        description: ""
+        description: 7th sample value entered by vendor
         sourceColumn: tran_sample7
         sourceTable: Critical parameter details
       tran_sample8:
         type: STRING
-        description: ""
+        description: 8th sample value entered by vendor
         sourceColumn: tran_sample8
         sourceTable: Critical parameter details
       tran_sample9:
         type: STRING
-        description: ""
+        description: 9th sample value entered by vendor
         sourceColumn: tran_sample9
         sourceTable: Critical parameter details
       tran_sample10:
         type: STRING
-        description: ""
+        description: 10th sample value entered by vendor
         sourceColumn: tran_sample10
         sourceTable: Critical parameter details
       counta:
         type: STRING
-        description: ""
+        description: Unique number for each sample value in defined composite key
         sourceColumn: counta
         sourceTable: Critical parameter details
       min:
         type: STRING
-        description: ""
+        description: Min of all samples
         sourceColumn: min
         sourceTable: Critical parameter details
       max:
         type: STRING
-        description: ""
+        description: Max of all samples
         sourceColumn: max
         sourceTable: Critical parameter details
       range:
         type: STRING
-        description: ""
+        description: Difference of Max and Min
         sourceColumn: range
         sourceTable: Critical parameter details
       mean:
         type: STRING
-        description: ""
+        description: mean of samples
         sourceColumn: mean
         sourceTable: Critical parameter details
       prev_value:
         type: STRING
-        description: ""
+        description: previous entry in sample 1
         sourceColumn: prev_value
         sourceTable: Critical parameter details
       moving_range:
         type: STRING
-        description: ""
+        description: in case of sample count 1, this field is required to calculate range
         sourceColumn: moving_range
         sourceTable: Critical parameter details
       xbb:
         type: STRING
-        description: ""
+        description: mean of mean column
         sourceColumn: xbb
         sourceTable: Critical parameter details
       rbar:
         type: STRING
-        description: ""
+        description: Row by agonizing row
         sourceColumn: rbar
         sourceTable: Critical parameter details
       sigma:
         type: STRING
-        description: ""
+        description: Standard Deviation
         sourceColumn: sigma
         sourceTable: Critical parameter details
       cp:
         type: STRING
-        description: ""
+        description: Critical Parameter
         sourceColumn: cp
         sourceTable: Critical parameter details
       cpl:
         type: STRING
-        description: ""
+        description: Lower CP
         sourceColumn: cpl
         sourceTable: Critical parameter details
       cpu:
         type: STRING
-        description: ""
+        description: Upper CP
         sourceColumn: cpu
         sourceTable: Critical parameter details
       cpk:
         type: STRING
-        description: ""
+        description: Critical Parameter Indices
         sourceColumn: cpk
         sourceTable: Critical parameter details
       xbar_ucl:
         type: STRING
-        description: ""
+        description: Xbar Upper Control Limit
         sourceColumn: xbar_ucl
         sourceTable: Critical parameter details
       xbar_lcl:
         type: STRING
-        description: ""
+        description: Xbar Lower Control Limit
         sourceColumn: xbar_lcl
         sourceTable: Critical parameter details
       rchart_ucl:
         type: STRING
-        description: ""
+        description: R Chart Upper Control Limit
         sourceColumn: rchart_ucl
         sourceTable: Critical parameter details
       rchart_lcl:
         type: STRING
-        description: ""
+        description: R Chart Lower Control Limit
         sourceColumn: rchart_lcl
         sourceTable: Critical parameter details
       xchart_ucl:
         type: STRING
-        description: ""
+        description: X Chart Upper Control Limit
         sourceColumn: xchart_ucl
         sourceTable: Critical parameter details
       xchart_lcl:
         type: STRING
-        description: ""
+        description: X Chart Lower Control Limit
         sourceColumn: xchart_lcl
         sourceTable: Critical parameter details
       mrchart_ucl:
         type: STRING
-        description: ""
+        description: MR Chart Upper Control Limit
         sourceColumn: mrchart_ucl
         sourceTable: Critical parameter details
       mrchart_lcl:
         type: STRING
-        description: ""
+        description: MR Chart Lower Control Limit
         sourceColumn: mrchart_lcl
         sourceTable: Critical parameter details
       flag_usl_lsl:
         type: STRING
-        description: ""
+        description: If any sample value is less than LSL and greater than USL, then
+          this flag will be true
         sourceColumn: flag_usl_lsl
         sourceTable: Critical parameter details
       flag_xbar_ucl_lcl:
         type: STRING
-        description: ""
+        description: If any mean value is breaching the Xbar UCL LCL Limit, then this
+          flag will be true
         sourceColumn: flag_xbar_ucl_lcl
         sourceTable: Critical parameter details
       flag_rchart_ucl_lcl:
         type: STRING
-        description: ""
+        description: If any range value is breaching the Rchart UCL LCL Limit, then this
+          flag will be true
         sourceColumn: flag_rchart_ucl_lcl
         sourceTable: Critical parameter details
       flag_xchart_ucl_lcl:
         type: STRING
-        description: ""
+        description: If any mean value is breaching the XChart UCL LCL Limit, then this
+          flag will be true
         sourceColumn: flag_xchart_ucl_lcl
         sourceTable: Critical parameter details
       flag_mrchart_ucl_lcl:
         type: STRING
-        description: ""
+        description: If any moving range value is breaching the Rchart UCL LCL Limit,
+          then this flag will be true
         sourceColumn: flag_mrchart_ucl_lcl
         sourceTable: Critical parameter details
       validation_usl_lsl:
         type: STRING
-        description: ""
+        description: Flag to check if Cp flag is greater than Cpk
         sourceColumn: validation_usl_lsl
         sourceTable: Critical parameter details
       cp_flag:
         type: STRING
-        description: ""
+        description: Flag to categorise cp values in low, medium or high
         sourceColumn: cp_flag
         sourceTable: Critical parameter details
       cpk_flag:
         type: STRING
-        description: ""
+        description: Flag to categorise cpk values in low, medium or high
         sourceColumn: cpk_flag
         sourceTable: Critical parameter details
       continous_flag_alert:
         type: STRING
-        description: ""
+        description: If mean value is increasing or decreasing continously for 7 days,
+          this flag will be set to 1
         sourceColumn: continous_flag_alert
         sourceTable: Critical parameter details
       alert_details:
         type: STRING
-        description: ""
+        description: categorise the alerts in Beyond Control Limit, Beyond Spec Limit,
+          Beyond Control Band, 7 points up or down
         sourceColumn: alert_details
         sourceTable: Critical parameter details
       _7_points_up:
         type: STRING
-        description: ""
+        description: If mean value is increasing continously for 7 days
         sourceColumn: "`_7_points_up`"
         sourceTable: Critical parameter details
       _7_points_down:
         type: STRING
-        description: ""
+        description: If mean value is increasing decreasing for 7 days
         sourceColumn: "`_7_points_down`"
         sourceTable: Critical parameter details
       runchart_ucl:
         type: STRING
-        description: ""
+        description: Upper control band limit with 80% margin
         sourceColumn: runchart_ucl
         sourceTable: Critical parameter details
       runchart_lcl:
         type: STRING
-        description: ""
+        description: Lower control band limit with 80% margin
         sourceColumn: runchart_lcl
         sourceTable: Critical parameter details
       insp_smpl_feq:
         type: STRING
-        description: ""
+        description: smpl feq
         sourceColumn: insp_smpl_feq
         sourceTable: Critical parameter details
       insp_part_rmrk:
         type: STRING
-        description: ""
+        description: Part remarks
         sourceColumn: insp_part_rmrk
         sourceTable: Critical parameter details
       insp_ctrl_limt:
         type: STRING
-        description: ""
+        description: Control limit
         sourceColumn: insp_ctrl_limt
         sourceTable: Critical parameter details
       insp_ctrl_point:
         type: STRING
-        description: ""
+        description: Control point
         sourceColumn: insp_ctrl_point
         sourceTable: Critical parameter details
       insp_ctrl_band:
         type: STRING
-        description: ""
+        description: Control band
         sourceColumn: insp_ctrl_band
         sourceTable: Critical parameter details
       insp_close_alrt:
         type: STRING
-        description: ""
+        description: Close alert
         sourceColumn: insp_close_alrt
         sourceTable: Critical parameter details
       insp_src:
         type: STRING
-        description: ""
+        description: Source
         sourceColumn: insp_src
         sourceTable: Critical parameter details
       insp_catg:
         type: STRING
-        description: ""
+        description: Category
         sourceColumn: insp_catg
         sourceTable: Critical parameter details
       insp_misp_plan:
         type: STRING
-        description: ""
+        description: misp plan
         sourceColumn: insp_misp_plan
         sourceTable: Critical parameter details
       attribute:
         type: STRING
-        description: ""
+        description: attribute
         sourceColumn: attribute
         sourceTable: Critical parameter details
       value:
         type: STRING
-        description: ""
+        description: value
         sourceColumn: value
         sourceTable: Critical parameter details
       lower_value_uni:
         type: STRING
-        description: ""
+        description: lower value
         sourceColumn: lower_value_uni
         sourceTable: Critical parameter details
       upper_value_uni:
         type: STRING
-        description: ""
+        description: upper value
         sourceColumn: upper_value_uni
         sourceTable: Critical parameter details
       uni_values:
@@ -438,17 +445,17 @@ productState:
         sourceTable: Critical parameter details
       control_band_percent:
         type: STRING
-        description: ""
+        description: control band %
         sourceColumn: control_band_percent
         sourceTable: Critical parameter details
       ucl:
         type: STRING
-        description: ""
+        description: upper control limit
         sourceColumn: ucl
         sourceTable: Critical parameter details
       lcl:
         type: STRING
-        description: ""
+        description: lower control limit
         sourceColumn: lcl
         sourceTable: Critical parameter details
       etl_inserted_date:
