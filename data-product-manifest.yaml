@@ -1,4 +1,4 @@
-version: 0.0.5
+version: 0.0.3
 jobId: "1058"
 jobName: Consolidated Critical Parameter Details
 jobType: Aggregated Data Product
@@ -7,9 +7,9 @@ alias: iceberg_state_management
 discoveryPort:
   name: Consolidated Critical Parameter Details
 inputPorts:
-  - alias: critical_parameter_details_1
+  - alias: Inspection_Item_Parameter_Detail_1
     isDynamic: true
-    dataProductUrn: urn:dv:dataproduct:7dffc599-cb7a-4f9b-85f5-5e76c53fd572
+    dataProductUrn: urn:dv:dataproduct:1ece1da2-b682-4525-b595-b9ba375a48a4
     filter: ""
     projection: ""
     optional:
