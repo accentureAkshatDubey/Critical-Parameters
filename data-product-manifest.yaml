@@ -1,4 +1,4 @@
-version: 0.0.36
+version: 0.0.38
 jobId: "985"
 jobName: Inspection Item Parameter Detail
 jobType: Source Aligned Data Product
@@ -35,197 +35,197 @@ productState:
     properties:
       tran_part_code:
         type: STRING
-        description: ""
+        description: Code of inspection item
         sourceColumn: TRAN_PART_CODE
         sourceTable: QACP_TRAN
       tran_insp_sr_no:
         type: STRING
-        description: ""
+        description: Serial Number of Inspection Item
         sourceColumn: "TRAN_INSP_SR_NO "
         sourceTable: QACP_TRAN
       tran_prod_stats:
         type: STRING
-        description: ""
+        description: production status
         sourceColumn: "TRAN_PROD_STATS "
         sourceTable: QACP_TRAN
       tran_prod_date:
         type: DATETIME
-        description: ""
+        description: production date
         sourceColumn: "TRAN_PROD_DATE "
         sourceTable: QACP_TRAN
       tran_line_code:
         type: STRING
-        description: ""
+        description: unique code of line
         sourceColumn: "TRAN_LINE_CODE "
         sourceTable: QACP_TRAN
       tran_shift:
         type: STRING
-        description: ""
+        description: shift code
         sourceColumn: TRAN_SHIFT
         sourceTable: QACP_TRAN
       tran_btch_code:
         type: STRING
-        description: ""
+        description: batch code
         sourceColumn: "TRAN_BTCH_CODE "
         sourceTable: QACP_TRAN
       tran_prod_count:
         type: STRING
-        description: ""
+        description: "Unique Number added "
         sourceColumn: TRAN_PROD_COUNT
         sourceTable: QACP_TRAN
       tran_sample1:
         type: STRING
-        description: ""
+        description: 1st sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE1 "
         sourceTable: QACP_TRAN
       tran_sample2:
         type: STRING
-        description: ""
+        description: 2nd sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE2 "
         sourceTable: QACP_TRAN
       tran_sample3:
         type: STRING
-        description: ""
+        description: 3rd sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE3 "
         sourceTable: QACP_TRAN
       tran_sample4:
         type: STRING
-        description: ""
+        description: 4th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE4 "
         sourceTable: QACP_TRAN
       tran_sample5:
         type: STRING
-        description: ""
+        description: 5th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE5 "
         sourceTable: QACP_TRAN
       tran_sample6:
         type: STRING
-        description: ""
+        description: 6th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE6 "
         sourceTable: QACP_TRAN
       tran_sample7:
         type: STRING
-        description: ""
+        description: 7th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE7 "
         sourceTable: QACP_TRAN
       tran_sample8:
         type: STRING
-        description: ""
+        description: 8th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE8 "
         sourceTable: QACP_TRAN
       tran_sample9:
         type: STRING
-        description: ""
+        description: 9th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE9 "
         sourceTable: QACP_TRAN
       tran_sample10:
         type: STRING
-        description: ""
+        description: 10th sample value entered by vendor
         sourceColumn: "TRAN_SAMPLE10 "
         sourceTable: QACP_TRAN
       insp_part_code:
         type: STRING
-        description: ""
+        description: Code of inspection item
         sourceColumn: "INSP_PART_CODE "
         sourceTable: QACP_INSP_ITEM
       insp_sr_no:
         type: STRING
-        description: ""
+        description: Serial Number of Inspection Item
         sourceColumn: INSP_SR_NO
         sourceTable: QACP_INSP_ITEM
       insp_ltlr:
         type: STRING
-        description: ""
+        description: LSL -Lower spec limit
         sourceColumn: INSP_LTLR
         sourceTable: QACP_INSP_ITEM
       insp_utlr:
         type: STRING
-        description: ""
+        description: USL - Upper spec limit
         sourceColumn: "INSP_UTLR "
         sourceTable: QACP_INSP_ITEM
       insp_item:
         type: STRING
-        description: ""
+        description: Inspection Item
         sourceColumn: "INSP_ITEM "
         sourceTable: QACP_INSP_ITEM
       insp_smpl_cnt:
         type: STRING
-        description: ""
+        description: Number of samples available for Cosideration
         sourceColumn: "INSP_SMPL_CNT "
         sourceTable: QACP_INSP_ITEM
       insp_from_date:
         type: DATETIME
-        description: ""
+        description: From date field of inspection item
         sourceColumn: "INSP_FROM_DATE "
         sourceTable: QACP_INSP_ITEM
       insp_to_date:
         type: DATETIME
-        description: ""
+        description: To Date field of inspection item
         sourceColumn: "INSP_TO_DATE "
         sourceTable: QACP_INSP_ITEM
       insp_base_value:
         type: STRING
-        description: ""
+        description: Mean(Provided in system)
         sourceColumn: "INSP_BASE_VALUE "
         sourceTable: QACP_INSP_ITEM
       insp_unit:
         type: STRING
-        description: ""
+        description: Dimension (cm,mm, etc)
         sourceColumn: INSP_UNIT
         sourceTable: QACP_INSP_ITEM
       insp_ctrl_band:
         type: STRING
-        description: ""
+        description: Control band
         sourceColumn: INSP_CTRL_BAND
         sourceTable: QACP_INSP_ITEM
       insp_smpl_feq:
         type: STRING
-        description: ""
+        description: smpl feq
         sourceColumn: INSP_SMPL_FEQ
         sourceTable: QACP_INSP_ITEM
       insp_part_rmrk:
         type: STRING
-        description: ""
+        description: Part remarks
         sourceColumn: "INSP_PART_RMRK "
         sourceTable: QACP_INSP_ITEM
       insp_ctrl_limt:
         type: STRING
-        description: ""
+        description: Control limit
         sourceColumn: "INSP_CTRL_LIMT "
         sourceTable: QACP_INSP_ITEM
       insp_ctrl_point:
         type: STRING
-        description: ""
+        description: Control point
         sourceColumn: "INSP_CTRL_POINT "
         sourceTable: QACP_INSP_ITEM
       insp_close_alrt:
         type: STRING
-        description: ""
+        description: Close alert
         sourceColumn: INSP_CLOSE_ALRT
         sourceTable: QACP_INSP_ITEM
       insp_src:
         type: STRING
-        description: ""
+        description: Source
         sourceColumn: "INSP_SRC "
         sourceTable: QACP_INSP_ITEM
       insp_catg:
         type: STRING
-        description: ""
+        description: Category
         sourceColumn: "INSP_CATG "
         sourceTable: QACP_INSP_ITEM
       insp_misp_plan:
         type: STRING
-        description: ""
+        description: misp plan
         sourceColumn: "INSP_MISP_PLAN "
         sourceTable: QACP_INSP_ITEM
       insp_vend_code:
         type: STRING
-        description: ""
+        description: unique code of vendor
         sourceColumn: "INSP_VEND_CODE "
         sourceTable: QACP_INSP_ITEM
       insp_modl:
         type: STRING
-        description: ""
+        description: inspection item model
         sourceColumn: "INSP_MODL "
         sourceTable: QACP_INSP_ITEM
       etl_inserted_date:
@@ -292,7 +292,17 @@ transformation:
       persistDataFrame: false
     type: operationThroughSqlQuery
 controlPort:
-  dataQualityRules: {}
+  dataQualityRules:
+    RecordCountCheck:
+      productState:
+        expression: ">"
+        number: 0
+        referenceAlias: Iceberg_Write
+    NullValueCheck:
+      productState:
+        checks:
+          - column: TRAN_PART_CODE
+        referenceAlias: Iceberg_Write
 outputPort:
   subscriptionChannels:
     - channelType: Postgres
