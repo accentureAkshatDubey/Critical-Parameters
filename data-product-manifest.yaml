@@ -1,4 +1,4 @@
-version: 0.0.5
+version: 0.0.7
 jobId: "1058"
 jobName: Consolidated Critical Parameter Details
 jobType: Aggregated Data Product
@@ -182,10 +182,10 @@ controlPort:
     NullValueCheck:
       productState:
         checks:
-          - column: PART_VEND_CODE
-          - column: INSP_PART_CODE
-          - column: INSP_ITEM
-          - column: TRAN_PROD_DATE
+          - column: VEND_CODE
+          - column: PART_CODE
+          - column: INSPECTION_ITEM
+          - column: PROD_DATE
         referenceAlias: iceberg_state_management
 outputPort:
   subscriptionChannels:
