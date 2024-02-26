@@ -1,4 +1,4 @@
-version: 0.0.5
+version: 0.0.7
 jobId: "1057"
 jobName: Critical Parameter Details
 jobType: Aggregated Data Product
@@ -575,7 +575,7 @@ productState:
         sourceColumn: Manual
         sourceTable: Manual
   enforceSchemaMethod: ""
-  isProfilingEnabled: false
+  isProfilingEnabled: true
 transformation:
   - isDynamic: true
     alias: EMR_PySpark_1
