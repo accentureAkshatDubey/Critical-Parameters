@@ -1,4 +1,4 @@
-version: 0.0.7
+version: 0.0.8
 jobId: "1057"
 jobName: Critical Parameter Details
 jobType: Aggregated Data Product
@@ -49,463 +49,463 @@ productState:
     properties:
       username:
         type: STRING
-        description: MSIL Concered Department UserName
-        sourceColumn: "USERNAME                "
-        sourceTable: Fpay_Empl,QACP_PART
+        description: msil concered department username
+        sourceColumn: username
+        sourceTable: fpay_empl,qacp_part
       part_user_dept:
         type: STRING
-        description: Department ID of User
-        sourceColumn: "PART_USER_DEPT          "
-        sourceTable: QACP_PART
+        description: department id of user
+        sourceColumn: part_user_dept
+        sourceTable: qacp_part
       insp_part_code:
         type: STRING
-        description: Code of Inspection Item
-        sourceColumn: "INSP_PART_CODE          "
-        sourceTable: QACP_INSP_ITEM
+        description: code of inspection item
+        sourceColumn: insp_part_code
+        sourceTable: qacp_insp_item
       insp_sr_no:
         type: STRING
-        description: Serial Number of Inspection Item
-        sourceColumn: "INSP_SR_NO              "
-        sourceTable: QACP_INSP_ITEM
+        description: serial number of inspection item
+        sourceColumn: insp_sr_no
+        sourceTable: qacp_insp_item
       part_desc:
         type: STRING
-        description: Part Description
-        sourceColumn: "PART_DESC               "
-        sourceTable: QACP_PART
+        description: part description
+        sourceColumn: part_desc
+        sourceTable: qacp_part
       part_vend_code:
         type: STRING
-        description: Vendor Code supplying the part
-        sourceColumn: "PART_VEND_CODE          "
-        sourceTable: QACP_PART
+        description: vendor code supplying the part
+        sourceColumn: part_vend_code
+        sourceTable: qacp_part
       part_vend_desc:
         type: STRING
-        description: Vendor Description
-        sourceColumn: "PART_VEND_DESC          "
-        sourceTable: QACP_PART
+        description: vendor description
+        sourceColumn: part_vend_desc
+        sourceTable: qacp_part
       part_modl:
         type: STRING
-        description: "Model of part "
-        sourceColumn: "PART_MODL               "
-        sourceTable: QACP_PART
+        description: "model of part "
+        sourceColumn: part_modl
+        sourceTable: qacp_part
       insp_item:
         type: STRING
-        description: Inspection Item
-        sourceColumn: "INSP_ITEM               "
-        sourceTable: QACP_INSP_ITEM
+        description: inspection item
+        sourceColumn: insp_item
+        sourceTable: qacp_insp_item
       insp_from_date:
         type: STRING
-        description: From date field of inspection item
-        sourceColumn: "INSP_FROM_DATE          "
-        sourceTable: QACP_INSP_ITEM
+        description: from date field of inspection item
+        sourceColumn: insp_from_date
+        sourceTable: qacp_insp_item
       insp_to_date:
         type: STRING
-        description: To Date field of inspection item
-        sourceColumn: "INSP_TO_DATE            "
-        sourceTable: QACP_INSP_ITEM
+        description: to date field of inspection item
+        sourceColumn: insp_to_date
+        sourceTable: qacp_insp_item
       tran_prod_date:
         type: STRING
-        description: Production Date of Component
-        sourceColumn: "TRAN_PROD_DATE          "
-        sourceTable: QACP_TRAN
+        description: production date of component
+        sourceColumn: tran_prod_date
+        sourceTable: qacp_tran
       tran_line_code:
         type: STRING
-        description: Line Description
-        sourceColumn: "TRAN_LINE_CODE          "
-        sourceTable: QACP_TRAN
+        description: line description
+        sourceColumn: tran_line_code
+        sourceTable: qacp_tran
       tran_shift:
         type: STRING
-        description: Shift Name
-        sourceColumn: "TRAN_SHIFT              "
-        sourceTable: QACP_TRAN
+        description: shift name
+        sourceColumn: tran_shift
+        sourceTable: qacp_tran
       tran_btch_code:
         type: STRING
-        description: Batch Code
-        sourceColumn: "TRAN_BTCH_CODE          "
-        sourceTable: QACP_TRAN
+        description: batch code
+        sourceColumn: tran_btch_code
+        sourceTable: qacp_tran
       tran_prod_stats:
         type: STRING
-        description: Prod stats
-        sourceColumn: "TRAN_PROD_STATS         "
-        sourceTable: QACP_TRAN
+        description: prod stats
+        sourceColumn: tran_prod_stats
+        sourceTable: qacp_tran
       tran_prod_count:
         type: STRING
-        description: Unique Number added by Ishan
-        sourceColumn: "TRAN_PROD_COUNT         "
-        sourceTable: QACP_TRAN
+        description: unique number added by ishan
+        sourceColumn: tran_prod_count
+        sourceTable: qacp_tran
       insp_base_value:
         type: STRING
-        description: Mean(Provided in system)
-        sourceColumn: "INSP_BASE_VALUE         "
-        sourceTable: QACP_INSP_ITEM
+        description: mean(provided in system)
+        sourceColumn: insp_base_value
+        sourceTable: qacp_insp_item
       insp_ltlr:
         type: STRING
-        description: LSL -Lower spec limit
-        sourceColumn: "INSP_LTLR               "
-        sourceTable: QACP_INSP_ITEM
+        description: lsl -lower spec limit
+        sourceColumn: insp_ltlr
+        sourceTable: qacp_insp_item
       insp_utlr:
         type: STRING
-        description: USL - Upper spec limit
-        sourceColumn: "INSP_UTLR               "
-        sourceTable: QACP_INSP_ITEM
+        description: usl - upper spec limit
+        sourceColumn: insp_utlr
+        sourceTable: qacp_insp_item
       insp_unit:
         type: STRING
-        description: Dimension (cm,mm, etc)
-        sourceColumn: "INSP_UNIT               "
-        sourceTable: QACP_INSP_ITEM
+        description: dimension (cm,mm, etc)
+        sourceColumn: insp_unit
+        sourceTable: qacp_insp_item
       part_catg:
         type: STRING
-        description: A/R/AR
-        sourceColumn: "PART_CATG               "
-        sourceTable: QACP_PART
+        description: a/r/ar
+        sourceColumn: part_catg
+        sourceTable: qacp_part
       insp_smpl_cnt:
         type: STRING
-        description: Number of samples available for Cosideration
-        sourceColumn: "INSP_SMPL_CNT           "
-        sourceTable: QACP_INSP_ITEM
+        description: number of samples available for cosideration
+        sourceColumn: insp_smpl_cnt
+        sourceTable: qacp_insp_item
       sm1:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM1                     "
+        description: ng/none
+        sourceColumn: sm1
         sourceTable: ""
       tran_sample1:
         type: STRING
         description: 1st sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE1
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample1
+        sourceTable: qacp_tran
       sm2:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM2                     "
+        description: ng/none
+        sourceColumn: sm2
         sourceTable: ""
       tran_sample2:
         type: STRING
         description: 2nd sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE2
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample2
+        sourceTable: qacp_tran
       sm3:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM3                     "
+        description: ng/none
+        sourceColumn: sm3
         sourceTable: ""
       tran_sample3:
         type: STRING
         description: 3rd sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE3
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample3
+        sourceTable: qacp_tran
       sm4:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM4                     "
+        description: ng/none
+        sourceColumn: sm4
         sourceTable: ""
       tran_sample4:
         type: STRING
         description: 4th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE4
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample4
+        sourceTable: qacp_tran
       sm5:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM5                     "
+        description: ng/none
+        sourceColumn: sm5
         sourceTable: ""
       tran_sample5:
         type: STRING
         description: 5th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE5
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample5
+        sourceTable: qacp_tran
       sm6:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM6                     "
+        description: ng/none
+        sourceColumn: sm6
         sourceTable: ""
       tran_sample6:
         type: STRING
         description: 6th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE6
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample6
+        sourceTable: qacp_tran
       sm7:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM7                     "
+        description: ng/none
+        sourceColumn: sm7
         sourceTable: ""
       tran_sample7:
         type: STRING
         description: 7th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE7
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample7
+        sourceTable: qacp_tran
       sm8:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM8                     "
+        description: ng/none
+        sourceColumn: sm8
         sourceTable: ""
       tran_sample8:
         type: STRING
         description: 8th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE8
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample8
+        sourceTable: qacp_tran
       sm9:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM9                     "
+        description: ng/none
+        sourceColumn: sm9
         sourceTable: ""
       tran_sample9:
         type: STRING
         description: 9th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE9
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample9
+        sourceTable: qacp_tran
       sm10:
         type: STRING
-        description: NG/None
-        sourceColumn: "SM10                    "
+        description: ng/none
+        sourceColumn: sm10
         sourceTable: ""
       tran_sample10:
         type: STRING
         description: 10th sample value entered by vendor
-        sourceColumn: TRAN_SAMPLE10
-        sourceTable: QACP_TRAN
+        sourceColumn: tran_sample10
+        sourceTable: qacp_tran
       counta:
         type: STRING
-        description: Unique number for each sample value in defined composite key
-        sourceColumn: "CountA                  "
+        description: unique number for each sample value in defined composite key
+        sourceColumn: counta
         sourceTable: ""
       min:
         type: STRING
-        description: Min of all samples
-        sourceColumn: "min                     "
+        description: min of all samples
+        sourceColumn: min
         sourceTable: ""
       max:
         type: STRING
-        description: Max of all samples
-        sourceColumn: "max                     "
+        description: max of all samples
+        sourceColumn: max
         sourceTable: ""
       range:
         type: STRING
-        description: Difference of Max and Min
-        sourceColumn: "range                   "
+        description: difference of max and min
+        sourceColumn: range
         sourceTable: ""
       mean:
         type: STRING
         description: mean of samples
-        sourceColumn: "mean                    "
+        sourceColumn: mean
         sourceTable: ""
       prev_value:
         type: STRING
         description: previous entry in sample 1
-        sourceColumn: "prev_value              "
+        sourceColumn: prev_value
         sourceTable: ""
       moving_range:
         type: STRING
         description: in case of sample count 1, this field is required to calculate range
-        sourceColumn: "Moving_range            "
+        sourceColumn: moving_range
         sourceTable: ""
       xbb:
         type: STRING
         description: mean of mean column
-        sourceColumn: "Xbb                     "
+        sourceColumn: xbb
         sourceTable: ""
       rbar:
         type: STRING
-        description: Row by agonizing row
-        sourceColumn: "Rbar                    "
+        description: row by agonizing row
+        sourceColumn: rbar
         sourceTable: ""
       sigma:
         type: STRING
-        description: Standard Deviation
-        sourceColumn: "Sigma                   "
+        description: standard deviation
+        sourceColumn: sigma
         sourceTable: ""
       cp:
         type: STRING
-        description: Critical Parameter
-        sourceColumn: "Cp                      "
+        description: critical parameter
+        sourceColumn: cp
         sourceTable: ""
       cpl:
         type: STRING
-        description: Lower CP
-        sourceColumn: "Cpl                     "
+        description: lower cp
+        sourceColumn: cpl
         sourceTable: ""
       cpu:
         type: STRING
-        description: Upper CP
-        sourceColumn: "Cpu                     "
+        description: upper cp
+        sourceColumn: cpu
         sourceTable: ""
       cpk:
         type: STRING
-        description: Critical Parameter Indices
-        sourceColumn: "Cpk                     "
+        description: critical parameter indices
+        sourceColumn: cpk
         sourceTable: ""
       xbar_ucl:
         type: STRING
-        description: Xbar Upper Control Limit
-        sourceColumn: "Xbar_UCL                "
+        description: xbar upper control limit
+        sourceColumn: xbar_ucl
         sourceTable: ""
       xbar_lcl:
         type: STRING
-        description: Xbar Lower Control Limit
-        sourceColumn: "Xbar_LCL                "
+        description: xbar lower control limit
+        sourceColumn: xbar_lcl
         sourceTable: ""
       rchart_ucl:
         type: STRING
-        description: R Chart Upper Control Limit
-        sourceColumn: "RChart_UCL              "
+        description: r chart upper control limit
+        sourceColumn: rchart_ucl
         sourceTable: ""
       rchart_lcl:
         type: STRING
-        description: R Chart Lower Control Limit
-        sourceColumn: "RChart_LCL              "
+        description: r chart lower control limit
+        sourceColumn: rchart_lcl
         sourceTable: ""
       xchart_ucl:
         type: STRING
-        description: X Chart Upper Control Limit
-        sourceColumn: "XChart_UCL              "
+        description: x chart upper control limit
+        sourceColumn: xchart_ucl
         sourceTable: ""
       xchart_lcl:
         type: STRING
-        description: X Chart Lower Control Limit
-        sourceColumn: "XChart_LCL              "
+        description: x chart lower control limit
+        sourceColumn: xchart_lcl
         sourceTable: ""
       mrchart_ucl:
         type: STRING
-        description: MR Chart Upper Control Limit
-        sourceColumn: "MRChart_UCL             "
+        description: mr chart upper control limit
+        sourceColumn: mrchart_ucl
         sourceTable: ""
       mrchart_lcl:
         type: STRING
-        description: MR Chart Lower Control Limit
-        sourceColumn: "MRChart_LCL             "
+        description: mr chart lower control limit
+        sourceColumn: mrchart_lcl
         sourceTable: ""
       flag_usl_lsl:
         type: STRING
-        description: If any sample value is less than LSL and greater than USL, then
+        description: if any sample value is less than lsl and greater than usl, then
           this flag will be true
-        sourceColumn: "Flag_USL_LSL            "
+        sourceColumn: flag_usl_lsl
         sourceTable: ""
       flag_xbar_ucl_lcl:
         type: STRING
-        description: If any mean value is breaching the Xbar UCL LCL Limit, then this
+        description: if any mean value is breaching the xbar ucl lcl limit, then this
           flag will be true
-        sourceColumn: "Flag_XBar_UCL_LCL       "
+        sourceColumn: flag_xbar_ucl_lcl
         sourceTable: ""
       flag_rchart_ucl_lcl:
         type: STRING
-        description: If any range value is breaching the Rchart UCL LCL Limit, then this
+        description: if any range value is breaching the rchart ucl lcl limit, then this
           flag will be true
-        sourceColumn: "Flag_RChart_UCL_LCL     "
+        sourceColumn: flag_rchart_ucl_lcl
         sourceTable: ""
       flag_xchart_ucl_lcl:
         type: STRING
-        description: If any mean value is breaching the XChart UCL LCL Limit, then this
+        description: if any mean value is breaching the xchart ucl lcl limit, then this
           flag will be true
-        sourceColumn: "Flag_XChart_UCL_LCL     "
+        sourceColumn: flag_xchart_ucl_lcl
         sourceTable: ""
       flag_mrchart_ucl_lcl:
         type: STRING
-        description: If any moving range value is breaching the Rchart UCL LCL Limit,
+        description: if any moving range value is breaching the rchart ucl lcl limit,
           then this flag will be true
-        sourceColumn: "Flag_MRChart_UCL_LCL    "
+        sourceColumn: flag_mrchart_ucl_lcl
         sourceTable: ""
       validation_usl_lsl:
         type: STRING
-        description: Flag to check if Cp flag is greater than Cpk
-        sourceColumn: "Validation_USL_LSL      "
+        description: flag to check if cp flag is greater than cpk
+        sourceColumn: validation_usl_lsl
         sourceTable: ""
       cp_flag:
         type: STRING
-        description: Flag to categorise cp values in low, medium or high
-        sourceColumn: "cp_flag                 "
+        description: flag to categorise cp values in low, medium or high
+        sourceColumn: cp_flag
         sourceTable: ""
       cpk_flag:
         type: STRING
-        description: Flag to categorise cpk values in low, medium or high
-        sourceColumn: "cpk_flag                "
+        description: flag to categorise cpk values in low, medium or high
+        sourceColumn: cpk_flag
         sourceTable: ""
       continous_flag_alert:
         type: STRING
-        description: If mean value is increasing or decreasing continously for 7 days,
+        description: if mean value is increasing or decreasing continously for 7 days,
           this flag will be set to 1
-        sourceColumn: "continous_Flag_alert    "
+        sourceColumn: continous_flag_alert
         sourceTable: ""
       alert_details:
         type: STRING
-        description: categorise the alerts in Beyond Control Limit, Beyond Spec Limit,
-          Beyond Control Band, 7 points up or down
-        sourceColumn: "Alert Details           "
+        description: categorise the alerts in beyond control limit, beyond spec limit,
+          beyond control band, 7 points up or down
+        sourceColumn: alert details
         sourceTable: ""
       _7_points_up:
         type: STRING
-        description: If mean value is increasing continously for 7 days
-        sourceColumn: "_7_points_up            "
+        description: if mean value is increasing continously for 7 days
+        sourceColumn: _7_points_up
         sourceTable: ""
       _7_points_down:
         type: STRING
-        description: If mean value is increasing decreasing for 7 days
-        sourceColumn: "_7_points_down          "
+        description: if mean value is increasing decreasing for 7 days
+        sourceColumn: _7_points_down
         sourceTable: ""
       runchart_ucl:
         type: STRING
-        description: Upper control band limit with 80% margin
-        sourceColumn: "RunChart_UCL            "
+        description: upper control band limit with 80% margin
+        sourceColumn: runchart_ucl
         sourceTable: ""
       runchart_lcl:
         type: STRING
-        description: Lower control band limit with 80% margin
-        sourceColumn: "RunChart_LCL            "
+        description: lower control band limit with 80% margin
+        sourceColumn: runchart_lcl
         sourceTable: ""
       flag_sample1_band:
         type: STRING
-        description: Sample 1 Band if greater than Lower Spec limit but less than lower
+        description: sample 1 band if greater than lower spec limit but less than lower
           control limit
-        sourceColumn: "Flag_Sample1_Band       "
+        sourceColumn: flag_sample1_band
         sourceTable: ""
       flag_sample2_band:
         type: STRING
-        description: Sample 2 Band if greater than Lower Spec limit but less than lower
+        description: sample 2 band if greater than lower spec limit but less than lower
           control limit
-        sourceColumn: "Flag_Sample2_Band       "
+        sourceColumn: flag_sample2_band
         sourceTable: ""
       flag_sample3_band:
         type: STRING
-        description: Sample 3 Band if greater than Lower Spec limit but less than lower
+        description: sample 3 band if greater than lower spec limit but less than lower
           control limit
-        sourceColumn: "Flag_Sample3_Band       "
+        sourceColumn: flag_sample3_band
         sourceTable: ""
       flag_sample4_band:
         type: STRING
-        description: Sample 4 Band if greater than Lower Spec limit but less than lower
+        description: sample 4 band if greater than lower spec limit but less than lower
           control limit
-        sourceColumn: "Flag_Sample4_Band       "
+        sourceColumn: flag_sample4_band
         sourceTable: ""
       flag_sample5_band:
         type: STRING
-        description: Sample 5 Band if greater than Lower Spec limit but less than lower
+        description: sample 5 band if greater than lower spec limit but less than lower
           control limit
-        sourceColumn: "Flag_Sample5_Band       "
+        sourceColumn: flag_sample5_band
         sourceTable: ""
       flag_sample6_band:
         type: STRING
-        description: Sample 6 Band if greater than Lower Spec limit but less than lower
+        description: sample 6 band if greater than lower spec limit but less than lower
           control limit
         sourceColumn: flag_sample6_band
         sourceTable: ""
       flag_sample7_band:
         type: STRING
-        description: Sample 7 Band if greater than Lower Spec limit but less than lower
+        description: sample 7 band if greater than lower spec limit but less than lower
           control limit
         sourceColumn: flag_sample7_band
         sourceTable: ""
       flag_sample8_band:
         type: STRING
-        description: Sample 8 Band if greater than Lower Spec limit but less than lower
+        description: sample 8 band if greater than lower spec limit but less than lower
           control limit
         sourceColumn: flag_sample8_band
         sourceTable: ""
       flag_sample9_band:
         type: STRING
-        description: Sample 9 Band if greater than Lower Spec limit but less than lower
+        description: sample 9 band if greater than lower spec limit but less than lower
           control limit
         sourceColumn: flag_sample9_band
         sourceTable: ""
       flag_sample10_band:
         type: STRING
-        description: Sample 10 Band if greater than Lower Spec limit but less than lower
+        description: sample 10 band if greater than lower spec limit but less than lower
           control limit
         sourceColumn: flag_sample10_band
         sourceTable: ""
@@ -513,67 +513,67 @@ productState:
         type: STRING
         description: smpl feq
         sourceColumn: insp_smpl_feq
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_part_rmrk:
         type: STRING
-        description: Part remarks
+        description: part remarks
         sourceColumn: insp_part_rmrk
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_ctrl_limt:
         type: STRING
-        description: Control limit
+        description: control limit
         sourceColumn: insp_ctrl_limt
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_ctrl_point:
         type: STRING
-        description: Control point
+        description: control point
         sourceColumn: insp_ctrl_point
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_ctrl_band:
         type: STRING
-        description: Control band
+        description: control band
         sourceColumn: insp_ctrl_band
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_close_alrt:
         type: STRING
-        description: Close alert
+        description: close alert
         sourceColumn: insp_close_alrt
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_src:
         type: STRING
-        description: Source
+        description: source
         sourceColumn: insp_src
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_catg:
         type: STRING
-        description: Category
+        description: category
         sourceColumn: insp_catg
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       insp_misp_plan:
         type: STRING
         description: misp plan
         sourceColumn: insp_misp_plan
-        sourceTable: QACP_INSP_ITEM
+        sourceTable: qacp_insp_item
       etl_inserted_date:
         type: DATETIME
-        description: ETL Audit Field to identify record insertion date
-        sourceColumn: Manual
-        sourceTable: Manual
+        description: etl audit field to identify record insertion date
+        sourceColumn: manual
+        sourceTable: manual
       etl_modified_date:
         type: DATETIME
-        description: ETL Audit Field to identify record modified date
-        sourceColumn: Manual
-        sourceTable: Manual
+        description: etl audit field to identify record modified date
+        sourceColumn: manual
+        sourceTable: manual
       etl_created_by:
         type: STRING
-        description: ETL Audit Field to identify record created by user
-        sourceColumn: Manual
-        sourceTable: Manual
+        description: etl audit field to identify record created by user
+        sourceColumn: manual
+        sourceTable: manual
       etl_updated_by:
         type: STRING
-        description: ETL Audit Field to identify record modified by user
-        sourceColumn: Manual
-        sourceTable: Manual
+        description: etl audit field to identify record modified by user
+        sourceColumn: manual
+        sourceTable: manual
   enforceSchemaMethod: ""
   isProfilingEnabled: true
 transformation:
