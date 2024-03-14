@@ -1,4 +1,4 @@
-version: 0.0.8
+version: 0.0.9
 jobId: "1057"
 jobName: Critical Parameter Details
 jobType: Aggregated Data Product
@@ -600,10 +600,10 @@ controlPort:
     NullValueCheck:
       productState:
         checks:
-          - column: PART_VEND_CODE
-          - column: INSP_PART_CODE
-          - column: INSP_ITEM
-          - column: TRAN_PROD_DATE
+          - column: part_vend_code
+          - column: insp_part_code
+          - column: insp_item
+          - column: tran_prod_date
         referenceAlias: Write_to_Iceberg
 outputPort:
   subscriptionChannels:
