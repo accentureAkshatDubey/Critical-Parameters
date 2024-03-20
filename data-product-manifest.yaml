@@ -1,4 +1,4 @@
-version: 0.0.11
+version: 0.0.13
 jobId: "1058"
 jobName: Consolidated Critical Parameter Details
 jobType: Aggregated Data Product
@@ -166,8 +166,8 @@ transformation:
     arguments: []
     pythonFilePath: s3://msil-dataverse-quality-assurance/Pyspark_Scripts/critical_parameters/consolidated_critical_parameter_details.py
     inputDataFrameList:
-      - inputDataFrame: ""
-        tempViewName: ""
+      - inputDataFrame: Critical_Parameter_Details_1
+        tempViewName: critical_parameter_details
     optional:
       sparkExtraConf:
         --jars: s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-core-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-spark-runtime-3.3_2.12-1.4.3.jar,s3://msil-data-lake-raw/InputData/Test/IMKT/test_iceberg_write/iceberg-aws-bundle-1.4.3.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/delta-core_2.12-0.2.0.jar,s3://msil-dataverse-quality-assurance/Temp_Dumps/iceberg-spark3-runtime-0.13.2.jar
