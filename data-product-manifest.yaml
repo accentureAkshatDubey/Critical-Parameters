@@ -1,4 +1,4 @@
-version: 0.0.6
+version: 0.0.9
 jobId: "1059"
 jobName: Vendor Critical Parameter Details
 jobType: Aggregated Data Product
@@ -479,7 +479,7 @@ productState:
         sourceColumn: Manual
         sourceTable: Manual
   stateStoreType: loadDataIceberg
-  isProfilingEnabled: false
+  isProfilingEnabled: true
   updateStrategy: Overwrite
   tableName: msil_dataverse_quality_assurance_catalog.vendor_critical_parameter_details
   warehousePath: s3://msil-dataverse-quality-assurance/
